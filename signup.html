@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>VMV Fitness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body background = "media/wall1.jpg">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="media/gym.jpg" style="width:100%">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+   <a class="w3-bar-item w3-button w3-padding-large w3-black" onclick= "document.getElementById('login').style.display='block'">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>LOG IN</p>
+  </a>
+
+</nav>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+ <header class="w3-container w3-padding-32 w3-center" id="home">
+    <h1 class="w3-text-light-grey"><span class="w3-hide-small">VMV</span> Fitness.</h1>
+    <p class= "w3-text-light-grey">Online Fitness Club.</p>
+  </header>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="price">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-center">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">VMV Fitness Pass</li>
+          <li class="w3-padding-16">One affordable pass to access over hundreds of gyms and studios in your city.</li>
+          <li class="w3-padding-16">Find, reserve and experience a huge variety of activities like yoga, zumba, MMA, functional training and more.</li>
+          <li class="w3-padding-16">No contracts or lock-in period! Enjoy a flexible monthly subscription and take a break anytime.</li>
+          <li class="w3-padding-16">#VMVFitTogether with friends and keep each other motivated.</li>
+          <li class="w3-padding-16">
+            <h2>RM 339</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black" onclick= "document.getElementById('signup').style.display='block'">Sign Up</a></button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Pricing tables -->
+    </div>
+  </div>
+  
+   <!-- Modal -->
+<div id="login" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:38px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('login').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>   
+	 <h2 class="w3-wide"><i class="fa fa-user w3-xxlarge"></i> LOG IN</h2>   
+	 <form method="post" action="login1.php">
+	<p><input class="w3-input w3-padding-16" type="text" placeholder="User Id" required name="uid"></p>
+    <p><input class="w3-input w3-padding-16" type="password" placeholder="Password" required name="pass"></p>
+	<button class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" type="submit"><i class="fa fa-check"></i>LOG IN</button>
+	</form>
+	</div>
+   </div>
+</div>
+
+<div id="signup" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:38px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('signup').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>   
+	 <h2 class="w3-wide"><i class="fa fa-user-plus w3-xxlarge"></i> SIGN UP</h2>   
+	 <script type="text/javascript" src="check.js"></script>
+	 <form onsubmit="return check()" method="post" action="signup.php">
+	<p><input class="w3-input w3-padding-16" type="text" placeholder="Username" required name="un"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="User Id" required name="id"></p>
+      <p><input id = "np" class="w3-input w3-padding-16" type="password" placeholder="Password" required name="pass"></p>
+	  <p><input id = "rp" class="w3-input w3-padding-16" type="password" placeholder="Re-type Password" required name="rpass"></p>
+	  <p><input class="w3-input w3-padding-16" type="email" placeholder="E-mail" required name="mail"></p>
+	<button class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" type="submit"><i class="fa fa-check"></i>SIGN UP</button>
+	</form>
+	</div>
+   </div>
+</div>
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="error.html"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="error.html"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="error.html"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+    <a href="error.html"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+    <a href="error.html"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="error.html"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <p class="w3-medium">Powered by <a href="index.html" class="w3-hover-text-green">vmvfitness.com</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
